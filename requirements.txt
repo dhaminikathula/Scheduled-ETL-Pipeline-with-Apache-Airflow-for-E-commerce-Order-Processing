@@ -1,0 +1,8 @@
+pandas==2.2.2
+numpy==1.26.4
+mysql-connector-python==9.0.0
+apache-airflow-providers-mysql==5.7.3
+faker==26.0.0
+pytest==8.2.2
+python-dotenv==1.0.1
+psycopg2-binary==2.9.9

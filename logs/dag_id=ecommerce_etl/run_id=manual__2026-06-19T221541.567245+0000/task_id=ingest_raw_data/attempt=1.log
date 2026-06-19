@@ -1,0 +1,24 @@
+[2026-06-19T22:15:42.902+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-06-19T22:15:42.928+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ecommerce_etl.ingest_raw_data manual__2026-06-19T22:15:41.567245+00:00 [queued]>
+[2026-06-19T22:15:42.940+0000] {taskinstance.py:2603} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ecommerce_etl.ingest_raw_data manual__2026-06-19T22:15:41.567245+00:00 [queued]>
+[2026-06-19T22:15:42.941+0000] {taskinstance.py:2856} INFO - Starting attempt 1 of 4
+[2026-06-19T22:15:42.961+0000] {taskinstance.py:2879} INFO - Executing <Task(PythonOperator): ingest_raw_data> on 2026-06-19 22:15:41.567245+00:00
+[2026-06-19T22:15:42.972+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=189) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-06-19T22:15:42.974+0000] {standard_task_runner.py:72} INFO - Started process 190 to run task
+[2026-06-19T22:15:42.972+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'ecommerce_etl', 'ingest_raw_data', 'manual__2026-06-19T22:15:41.567245+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/ecommerce_etl.py', '--cfg-path', '/tmp/tmpysgiqtsu']
+[2026-06-19T22:15:42.975+0000] {standard_task_runner.py:105} INFO - Job 31: Subtask ingest_raw_data
+[2026-06-19T22:15:43.072+0000] {task_command.py:467} INFO - Running <TaskInstance: ecommerce_etl.ingest_raw_data manual__2026-06-19T22:15:41.567245+00:00 [running]> on host 07a71639d9ed
+[2026-06-19T22:15:43.196+0000] {taskinstance.py:3122} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='ecommerce_etl' AIRFLOW_CTX_TASK_ID='ingest_raw_data' AIRFLOW_CTX_EXECUTION_DATE='2026-06-19T22:15:41.567245+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-06-19T22:15:41.567245+00:00'
+[2026-06-19T22:15:43.198+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2026-06-19T22:15:44.140+0000] {ecommerce_etl.py:49} INFO - Processing file: orders_20260615.csv
+[2026-06-19T22:15:44.317+0000] {ecommerce_etl.py:49} INFO - Processing file: orders_20260616.csv
+[2026-06-19T22:15:44.446+0000] {ecommerce_etl.py:49} INFO - Processing file: orders_20260617.csv
+[2026-06-19T22:15:44.554+0000] {ecommerce_etl.py:49} INFO - Processing file: orders_20260618.csv
+[2026-06-19T22:15:44.674+0000] {ecommerce_etl.py:49} INFO - Processing file: orders_20260619.csv
+[2026-06-19T22:15:44.830+0000] {ecommerce_etl.py:119} INFO - Rows loaded into raw_orders: 510
+[2026-06-19T22:15:44.834+0000] {python.py:240} INFO - Done. Returned value was: None
+[2026-06-19T22:15:44.852+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2026-06-19T22:15:44.853+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=ecommerce_etl, task_id=ingest_raw_data, run_id=manual__2026-06-19T22:15:41.567245+00:00, execution_date=20260619T221541, start_date=20260619T221542, end_date=20260619T221544
+[2026-06-19T22:15:44.919+0000] {local_task_job_runner.py:261} INFO - Task exited with return code 0
+[2026-06-19T22:15:44.956+0000] {taskinstance.py:3891} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-06-19T22:15:44.958+0000] {local_task_job_runner.py:240} INFO - ::endgroup::
